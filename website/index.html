@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Journal App</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="holder headline">
+            Weather Journal App
+        </div>
+        <div class="holder zip">
+            <label for="zip">Enter Zipcode here</label>
+            <input type="text" required id="zip" placeholder="enter zip code here">
+        </div>
+        <div class="holder country">
+            <label for="country">Enter Country code here</label>
+            <input type="text" required id="country" placeholder="enter country code here" minlength="2" maxlength="2">
+            <p class="hint">Two-letter country codes like US, GB for more <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements">click here</a> </p>
+        </div>
+        <div class="holder feel">
+            <label for="feelings">How are you feeling today?</label>
+            <textarea class="myInput" required id="feelings" placeholder="Enter your feelings here" rows="9" cols="50"></textarea>
+            <button id="generate" type="submit"> Generate! </button>
+        </div>
+        <div class="holder entry">
+            <div class="title">Most Recent Entry</div>
+            <div id="entryHolder">
+                <div id="date"></div>
+                <div id="temp"></div>
+                <div id="content"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal_container">
+        <div class="modal">
+            <button class="modal_close">&times;</button>
+            <p class="msg"></p>
+        </div>
+    </div>
+    <script src="app.js" type="text/javascript"></script>
+</body>
+
+</html>
